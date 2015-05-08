@@ -194,12 +194,13 @@
                     Kiểu hiển thị
                 </th>
                 <td height="25">
-                    <asp:RadioButtonList ID="rblCatType" runat="server" RepeatColumns="6">                    
+                    <asp:RadioButtonList ID="rblCatType" runat="server" RepeatColumns="3">                    
                         <asp:ListItem Text="Việc làm" Value="2" Selected="True"></asp:ListItem>
                         <asp:ListItem Text="Cẩm nang" Value="3"></asp:ListItem>
                         <asp:ListItem Text="Góp ý" Value="4"></asp:ListItem>
                         <asp:ListItem Text="Hướng dẫn sử dụng" Value="5"></asp:ListItem>
                         <asp:ListItem Text="Thông báo" Value="6"></asp:ListItem>
+                        <asp:ListItem Text="Liên hệ quảng cáo" Value="8"></asp:ListItem>
                     </asp:RadioButtonList>
                 </td>
             </tr>

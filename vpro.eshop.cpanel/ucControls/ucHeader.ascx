@@ -24,7 +24,7 @@
                 <asp:Label runat="server" ID="lblUser" EnableViewState="false"></asp:Label></a>
         <a href="../page/user_changepass.aspx">[ Thay đổi mật khẩu ]</a> <a href="logout.aspx">
             [ Thoát ]</a>
-            <div style="text-align:right">Ngôn ngữ: <asp:Label runat="server" ID="lbLanguage"></asp:Label></div>
+            <div style="text-align:right;display:none">Ngôn ngữ: <asp:Label runat="server" ID="lbLanguage"></asp:Label></div>
     </div>
     <!--admin-->
     <div id="admin" style="margin-top: 20px; font-size: 13px; font-weight: bold;">

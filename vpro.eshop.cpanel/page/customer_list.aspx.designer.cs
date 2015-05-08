@@ -40,6 +40,15 @@ namespace vpro.eshop.cpanel.page {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtKeyword;
         
         /// <summary>
+        /// ddlLoai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLoai;
+        
+        /// <summary>
         /// lbtSearch control.
         /// </summary>
         /// <remarks>

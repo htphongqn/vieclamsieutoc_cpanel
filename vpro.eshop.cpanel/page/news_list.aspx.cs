@@ -52,7 +52,7 @@ namespace vpro.eshop.cpanel.page
             //lang = Convert.ToInt32(Session["NN"]);
             if (!IsPostBack)
             {
-                ucHeader.HeaderLevel1 = "Việc làm - Tin tức";
+                ucHeader.HeaderLevel1 = "Tin tức";
                 ucHeader.HeaderLevel1_Url = "../page/news_list.aspx";
                 ucHeader.HeaderLevel2 = "Danh sách";
                 ucHeader.HeaderLevel2_Url = "../page/news_list.aspx";
@@ -115,7 +115,11 @@ namespace vpro.eshop.cpanel.page
                     break;
                 case 5: strResult = "Hướng dẫn sử dụng";
                     break;
-                case 6: strResult = "Thông báo";
+                case 6: strResult = "Thông báo cho NTV";
+                    break;
+                case 7: strResult = "Thông báo cho NTD";
+                    break;
+                case 8: strResult = "Liên hệ quảng cáo";
                     break;
                 default: strResult = "N/A";
                     break;
@@ -181,6 +185,7 @@ namespace vpro.eshop.cpanel.page
                 var AllList = (from g in DB.ESHOP_NEWs
                                where ("" == keyword || DB.fClearUnicode(g.NEWS_TITLE).Contains(keyword) || g.NEWS_DESC.Contains(keyword))
                                //&& g.NEWS_LANGUAGE == lang
+                               && (g.NEWS_TYPE != 1 && g.NEWS_TYPE != 2)
                                orderby g.NEWS_ID descending
                                select g);
 
@@ -578,6 +583,7 @@ namespace vpro.eshop.cpanel.page
             var s = (from a in DB.ESHOP_NEWs
                      join b in DB.ESHOP_NEWS_CATs on a.NEWS_ID equals b.NEWS_ID
                      where (a.NEWS_TYPE == N_ID || N_ID == -1)
+                     && (a.NEWS_TYPE != 1 && a.NEWS_TYPE != 2)
                      //&& a.NEWS_LANGUAGE == lang
                      select a).OrderByDescending(n => n.NEWS_PUBLISHDATE).ToList();
 

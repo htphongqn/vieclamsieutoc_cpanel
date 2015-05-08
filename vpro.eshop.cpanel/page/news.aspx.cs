@@ -54,9 +54,9 @@ namespace vpro.eshop.cpanel.page
             Session["FileManager"] = "/data/";
             if (!IsPostBack)
             {
-                ucHeader.HeaderLevel1 = "Việc làm - Tin tức";
+                ucHeader.HeaderLevel1 = "Tin tức";
                 ucHeader.HeaderLevel1_Url = "../page/news_list.aspx";
-                ucHeader.HeaderLevel2 = "Thêm mới/cập nhật Việc làm - Tin tức";
+                ucHeader.HeaderLevel2 = "Thêm mới/cập nhật Tin tức";
                 ucHeader.HeaderLevel2_Url = "../page/news.aspx";
                 LoadCategoryParent();
                 getInfo();
@@ -137,6 +137,7 @@ namespace vpro.eshop.cpanel.page
                                 from t2 in DB.ESHOP_CATEGORies
                                 where t2.CAT_RANK > 0
                                 //&& t2.CAT_LANGUAGE == lang
+                                && t2.CAT_TYPE != 2
                                 select new
                                 {
                                     CAT_ID = t2.CAT_NAME == "------- Root -------" ? 0 : t2.CAT_ID,
@@ -237,17 +238,6 @@ namespace vpro.eshop.cpanel.page
 
                 if (G_info.ToList().Count > 0)
                 {
-
-                    if (G_info.ToList()[0].n.NEWS_TYPE == 3)
-                    {
-                        dvProductDetails.Visible = dvPrice.Visible = false;
-                       
-                    }
-                    else
-                    {
-                        dvProductDetails.Visible = dvPrice.Visible = true;
-                        
-                    }
                     ddlCategory.SelectedValue = G_info.ToList()[0].CAT_ID.ToString();
                     //var eshopnewscats = DB.ESHOP_NEWS_CATs.Where(n => n.NEWS_ID == G_info.ToList()[0].CAT_ID);
 
@@ -258,7 +248,6 @@ namespace vpro.eshop.cpanel.page
                     
 
                     ddlTarget.SelectedValue = G_info.ToList()[0].n.NEWS_TARGET;
-                    txtPrice.Value = Utils.CStrDef(Utils.CIntDef(G_info.ToList()[0].n.NEWS_PRICE1));
                     
 
                     rblNewsType.SelectedValue = Utils.CStrDef(G_info.ToList()[0].n.NEWS_TYPE);
@@ -653,7 +642,7 @@ namespace vpro.eshop.cpanel.page
                             news_insert.NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                             news_insert.NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                             news_insert.NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-                            news_insert.NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
+                            
                             //news_insert.UNIT_ID2 = Utils.CIntDef(ddlUnit2.SelectedValue);
 
                             //news_insert.NEWS_IMAGE1 = News_Image1;
@@ -715,7 +704,7 @@ namespace vpro.eshop.cpanel.page
                                 c_update.ToList()[0].NEWS_COUNT = Utils.CIntDef(txtCount.Value);
                                 c_update.ToList()[0].NEWS_ORDER = Utils.CIntDef(txtOrder.Value);
                                 c_update.ToList()[0].NEWS_ORDER_PERIOD = Utils.CIntDef(txtOrderPeriod.Value);
-                                c_update.ToList()[0].NEWS_PRICE1 = Utils.CDecDef(txtPrice.Value);
+                                
                                 //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
                                 //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
                                 c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
@@ -1122,32 +1111,26 @@ namespace vpro.eshop.cpanel.page
                     case 1:
                         divchitiet.Visible = false;
                         divEditorHTMl.Visible = true;
-                        dvProductDetails.Visible = dvPrice.Visible = false;
                         break;
                     case 2:
                         divchitiet.Visible =false;
-                        divEditorHTMl.Visible = true;
-                        dvProductDetails.Visible = dvPrice.Visible = true;                        
+                        divEditorHTMl.Visible = true;                       
                         break;
                     case 3:
                         divchitiet.Visible = true;
                         divEditorHTMl.Visible = false;
-                        dvProductDetails.Visible = dvPrice.Visible = false;
                         break;
                     case 4:
                         divchitiet.Visible = true;
                         divEditorHTMl.Visible = false;
-                        dvProductDetails.Visible = dvPrice.Visible = false;
                         break;
                     case 5:
                         divchitiet.Visible = true;
                         divEditorHTMl.Visible = false;
-                        dvProductDetails.Visible = dvPrice.Visible = false;
                         break;
                     case 6:
                         divchitiet.Visible = true;
                         divEditorHTMl.Visible = false;
-                        dvProductDetails.Visible = dvPrice.Visible = false;
                         break;
                     default:
                         break;

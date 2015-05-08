@@ -310,24 +310,6 @@ namespace vpro.eshop.cpanel.page {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea mrk;
         
         /// <summary>
-        /// dvPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvPrice;
-        
-        /// <summary>
-        /// txtPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPrice;
-        
-        /// <summary>
         /// txtSeoTitle control.
         /// </summary>
         /// <remarks>
@@ -488,14 +470,5 @@ namespace vpro.eshop.cpanel.page {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlImage Image4;
-        
-        /// <summary>
-        /// dvProductDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvProductDetails;
     }
 }

@@ -25,8 +25,8 @@ namespace vpro.eshop.cpanel.page
         protected void lbtSave_Click(object sender, EventArgs e)
         {
             SaveHTMLInfo();
-            SaveHTMLInfo1();
-            SaveHTMLInfo2();
+            //SaveHTMLInfo1();
+            //SaveHTMLInfo2();
         }
 
         #endregion

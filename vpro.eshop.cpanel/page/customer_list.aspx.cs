@@ -70,9 +70,14 @@ namespace vpro.eshop.cpanel.page
             return _count.ToString();
         }
 
-        public string getLink(object obj_id)
+        public string getLink(object obj_id, object quyenId)
         {
-            return "customer.aspx?customer_id=" + Utils.CStrDef(obj_id);
+            int _quyenId = Utils.CIntDef(quyenId);
+            if(_quyenId == 1)
+                return "customerNTV.aspx?customer_id=" + Utils.CStrDef(obj_id);
+            else if (_quyenId == 2)
+                return "customerNTD.aspx?customer_id=" + Utils.CStrDef(obj_id);
+            return "";
         }
         public string getsex(object sexid)
         {
@@ -84,6 +89,16 @@ namespace vpro.eshop.cpanel.page
                 default: return  "Khác";
             }
         }
+        public string getloai(object oid)
+        {
+            int id = Utils.CIntDef(oid);
+            switch (id)
+            {
+                case 1: return "<span style='color: #223191'>Người tìm việc</span>";
+                case 2: return "<span style='color: #6d388f'>Nhà tuyển dụng</span>";
+                default: return "N/A";
+            }
+        }
         public string getDate(object News_PublishDate)
         {
             return string.Format("{0:dd/MM/yyyy}", News_PublishDate);
@@ -93,9 +108,10 @@ namespace vpro.eshop.cpanel.page
             try
             {
                 string keyword = txtKeyword.Value;
-
+                int quyen = Utils.CIntDef(ddlLoai.SelectedItem.Value);
                 var AllList = (from g in DB.ESHOP_CUSTOMERs
                                where ("" == keyword || (g.CUSTOMER_FULLNAME.ToString()).Contains(keyword))
+                               && (g.CUSTOMER_QUYEN == quyen || quyen == 0)
                                select g);
 
 
@@ -189,40 +205,6 @@ namespace vpro.eshop.cpanel.page
 
         }
 
-        protected void lbtSave_Click(object sender, EventArgs e)
-        {
-            HtmlInputCheckBox check = new HtmlInputCheckBox();
-            string strLink = "";
-            int i = 0;
-
-            try
-            {
-                foreach (DataGridItem item in GridItemList.Items)
-                {
-                    check = new HtmlInputCheckBox();
-                    check = (HtmlInputCheckBox)item.Cells[1].FindControl("chkSelect");
-
-                    if (check.Checked)
-                    {
-                        strLink = "customer.aspx?customer_id=" + Utils.CStrDef(GridItemList.DataKeys[i]);
-                        break;
-                    }
-                    i++;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                clsVproErrorHandler.HandlerError(ex);
-            }
-            finally
-            {
-                if (!string.IsNullOrEmpty(strLink))
-                    Response.Redirect(strLink);
-            }
-
-        }
-
         #endregion
 
         #region Grid Events
@@ -268,7 +250,7 @@ namespace vpro.eshop.cpanel.page
         {
             if ((((e.Item.ItemType == ListItemType.Item) | (e.Item.ItemType == ListItemType.AlternatingItem)) | (e.Item.ItemType == ListItemType.SelectedItem)))
             {
-                e.Item.Cells[8].Attributes.Add("onClick", "return confirm('Bạn có chắc chắn xóa?');");
+                //e.Item.Cells[8].Attributes.Add("onClick", "return confirm('Bạn có chắc chắn xóa?');");
             }
 
         }

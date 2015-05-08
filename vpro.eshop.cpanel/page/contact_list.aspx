@@ -126,7 +126,17 @@
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%"></HeaderStyle>
                                 <ItemStyle Wrap="False" CssClass="tdGridRow"></ItemStyle>
                             </asp:TemplateColumn>
-                            <asp:TemplateColumn HeaderText="Tiêu đề" HeaderStyle-Width="1%" ItemStyle-Wrap="true"
+                            <asp:TemplateColumn HeaderText="Phone" HeaderStyle-Width="1%" ItemStyle-Wrap="true"
+                                HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
+                                SortExpression="CONTACT_PHONE">
+                                <ItemTemplate>
+                                    <%# DataBinder.Eval(Container.DataItem, "CONTACT_PHONE")%>
+                                </ItemTemplate>
+                                <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%" HorizontalAlign="Left">
+                                </HeaderStyle>
+                                <ItemStyle Wrap="true" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
+                            </asp:TemplateColumn>
+                            <%--<asp:TemplateColumn HeaderText="Tiêu đề" HeaderStyle-Width="1%" ItemStyle-Wrap="true"
                                 HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
                                 SortExpression="CONTACT_TITLE">
                                 <ItemTemplate>
@@ -135,7 +145,7 @@
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%" HorizontalAlign="Left">
                                 </HeaderStyle>
                                 <ItemStyle Wrap="true" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
-                            </asp:TemplateColumn>
+                            </asp:TemplateColumn>--%>
                             <asp:TemplateColumn HeaderText="Địa chỉ" HeaderStyle-Width="1%" ItemStyle-Wrap="true"
                                 HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
                                 SortExpression="CONTACT_ADDRESS">
@@ -158,23 +168,33 @@
                                 </HeaderStyle>
                                 <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
                             </asp:TemplateColumn>
-                            <asp:TemplateColumn HeaderText="Phone" HeaderStyle-Width="1%" ItemStyle-Wrap="true"
-                                HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
-                                SortExpression="CONTACT_PHONE">
-                                <ItemTemplate>
-                                    <%# DataBinder.Eval(Container.DataItem, "CONTACT_PHONE")%>
-                                </ItemTemplate>
-                                <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%" HorizontalAlign="Left">
-                                </HeaderStyle>
-                                <ItemStyle Wrap="true" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
-                            </asp:TemplateColumn>
-                            <asp:TemplateColumn HeaderText="Nội dung" HeaderStyle-Width="94%" ItemStyle-Wrap="true"
+                            <%--<asp:TemplateColumn HeaderText="Nội dung" HeaderStyle-Width="94%" ItemStyle-Wrap="true"
                                 HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
                                 SortExpression="CONTACT_CONTENT">
                                 <ItemTemplate>
                                     <%# DataBinder.Eval(Container.DataItem, "CONTACT_CONTENT")%>
                                 </ItemTemplate>
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="94%" HorizontalAlign="Left">
+                                </HeaderStyle>
+                                <ItemStyle Wrap="true" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
+                            </asp:TemplateColumn>--%>                            
+                            <asp:TemplateColumn HeaderText="" HeaderStyle-Width="1%" ItemStyle-Wrap="true"
+                                HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
+                                SortExpression="CONTACT_PHONE">
+                                <ItemTemplate>
+                                    <%# getType(DataBinder.Eval(Container.DataItem, "CONTACT_TYPE"))%>
+                                </ItemTemplate>
+                                <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%" HorizontalAlign="Left">
+                                </HeaderStyle>
+                                <ItemStyle Wrap="true" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
+                            </asp:TemplateColumn>
+                            <asp:TemplateColumn HeaderText="Ngày gửi" HeaderStyle-Width="1%" ItemStyle-Wrap="true"
+                                HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
+                                SortExpression="CONTACT_PUBLISHDATE">
+                                <ItemTemplate>
+                                    <%# Convert.ToDateTime(DataBinder.Eval(Container.DataItem, "CONTACT_PUBLISHDATE")).ToString("dd-MM-yyyy")%>
+                                </ItemTemplate>
+                                <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%" HorizontalAlign="Left">
                                 </HeaderStyle>
                                 <ItemStyle Wrap="true" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
                             </asp:TemplateColumn>

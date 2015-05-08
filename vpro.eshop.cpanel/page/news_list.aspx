@@ -97,11 +97,14 @@
                         <strong>Lọc Theo : </strong>
                         <asp:DropDownList ID="Ddnguon" runat="server" AutoPostBack="True" OnSelectedIndexChanged="Change_nguon">
                             <asp:ListItem Value="-1">---- Chọn ----</asp:ListItem>
-                            <asp:ListItem Text="Tìm việc" Value="1"></asp:ListItem>
-                            <asp:ListItem Text="Tuyển dụng" Value="2"></asp:ListItem>
+                            <%--<asp:ListItem Text="Tìm việc" Value="1"></asp:ListItem>
+                            <asp:ListItem Text="Tuyển dụng" Value="2"></asp:ListItem>--%>
                             <asp:ListItem Text="Cẩm nang" Value="3"></asp:ListItem>
                             <asp:ListItem Text="Góp ý" Value="4"></asp:ListItem>
                             <asp:ListItem Text="Hướng dẫn sử dụng" Value="5"></asp:ListItem>
+                            <asp:ListItem Text="Thông báo cho NTV" Value="6"></asp:ListItem>
+                            <asp:ListItem Text="Thông báo cho NTD" Value="7"></asp:ListItem>
+                            <asp:ListItem Text="Liên hệ quảng cáo" Value="8"></asp:ListItem>
                         </asp:DropDownList>
                         <asp:DropDownList ID="ddlCategory" runat="server" AutoPostBack="True" OnSelectedIndexChanged="Drchuyenmuc_SelectedIndexChanged" Visible="false">
                         </asp:DropDownList>

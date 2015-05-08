@@ -44,10 +44,6 @@
         <%-- <div class="icon_function_Child">
             <asp:LinkButton ID="lbtHelp" runat="server"> <img src="../Images/ICON_Help.jpg" width="30" height="30" style="border: 0px" /><div>
                     Trợ giúp</div></asp:LinkButton>
-        </div>
-        <div class="icon_function_Child">
-            <asp:LinkButton ID="lbtSave" runat="server" OnClick="lbtSave_Click"> <img src="../Images/ICON_EDIT.jpg" width="30" height="30" style="border: 0px" /><div>
-                            Chỉnh sửa</div></asp:LinkButton>
         </div>--%>
         <%--<div class="icon_function_Child">
             <a href="customer.aspx">
@@ -71,7 +67,7 @@
     <div id="field">
         <table width="100%" border="0">
             <tr>
-                <td height="5" colspan="3" align="left">
+                <td height="5" colspan="4" align="left">
                 </td>
             </tr>
             <tr>
@@ -81,6 +77,13 @@
                 <td width="300px;">
                     <input name="txtKeyword" type="text" id="txtKeyword" style="width: 300px" runat="server" />
                 </td>
+                <td width="200px;">
+                    <asp:DropDownList ID="ddlLoai" runat="server">
+                        <asp:ListItem Value="0">---- Chọn loại khách hàng ----</asp:ListItem>
+                        <asp:ListItem Text="Người tìm việc" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="Nhà tuyển dụng" Value="2"></asp:ListItem>
+                    </asp:DropDownList>
+                </td>
                 <td>
                     <div id="click">
                         <asp:LinkButton ID="lbtSearch" runat="server" OnClick="lbtSearch_Click">Tìm kiếm </asp:LinkButton>
@@ -88,11 +91,11 @@
                 </td>
             </tr>
             <tr>
-                <td style="height: 10px;" colspan="3">
+                <td style="height: 10px;" colspan="4">
                 </td>
             </tr>
             <tr>
-                <td colspan="3">
+                <td colspan="4">
                     <asp:DataGrid ID="GridItemList" CellPadding="0" runat="server" AutoGenerateColumns="False"
                         Width="100%" DataKeyField="CUSTOMER_ID" CssClass="tdGridTable" SelectedIndex="0"
                         PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" AllowPaging="false"
@@ -124,68 +127,48 @@
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%"></HeaderStyle>
                                 <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Center"></ItemStyle>
                             </asp:TemplateColumn>
-                            <asp:TemplateColumn HeaderText="Email" HeaderStyle-Width="1%" ItemStyle-Wrap="False"
-                                HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
-                                SortExpression="CUSTOMER_EMAIL">
-                                <ItemTemplate>
-                                    <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "CUSTOMER_ID")) %>'>
-                                        <%# DataBinder.Eval(Container.DataItem, "CUSTOMER_EMAIL")%>
-                                    </a>
-                                </ItemTemplate>
-                                <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="40%"></HeaderStyle>
-                                <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
-                            </asp:TemplateColumn>
                             <asp:TemplateColumn HeaderText="Tên" HeaderStyle-Width="1%" ItemStyle-Wrap="False"
                                 HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
                                 SortExpression="CUSTOMER_FULLNAME">
                                 <ItemTemplate>
-                                    <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "CUSTOMER_ID")) %>'>
+                                    <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "CUSTOMER_ID"), DataBinder.Eval(Container.DataItem, "CUSTOMER_QUYEN")) %>'>
                                         <%# DataBinder.Eval(Container.DataItem, "CUSTOMER_FULLNAME")%>
                                     </a>
                                 </ItemTemplate>
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="40%"></HeaderStyle>
                                 <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
-                            </asp:TemplateColumn>
-                            <asp:TemplateColumn HeaderText="Ngày sinh" HeaderStyle-Width="1%" ItemStyle-Wrap="False"
-                                HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False">
-                                <ItemTemplate>
-                                    <%# getDate(DataBinder.Eval(Container.DataItem, "CUSTOMER_UPDATE"))%>
-                                </ItemTemplate>
-                                <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="40%"></HeaderStyle>
-                                <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
-                            </asp:TemplateColumn>
-                            <asp:TemplateColumn HeaderText="Điện thoại" HeaderStyle-Width="1%" ItemStyle-Wrap="False"
-                                HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
-                                SortExpression="CUSTOMER_PHONE1">
-                                <ItemTemplate>
-                                    <%# DataBinder.Eval(Container.DataItem, "CUSTOMER_PHONE1")%>
-                                </ItemTemplate>
-                                <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="40%"></HeaderStyle>
-                                <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Center"></ItemStyle>
-                            </asp:TemplateColumn>
+                            </asp:TemplateColumn>                                                        
                             <asp:TemplateColumn HeaderText="Địa chỉ" HeaderStyle-Width="1%" ItemStyle-Wrap="False"
                                 HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
                                 SortExpression="CUSTOMER_ADDRESS">
                                 <ItemTemplate>
                                     <%# DataBinder.Eval(Container.DataItem, "CUSTOMER_ADDRESS")%>
-                                    <%-- <%# DataBinder.Eval(Container.DataItem, "USER_FIELD3")%>--%>
                                 </ItemTemplate>
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="40%"></HeaderStyle>
-                                <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Center"></ItemStyle>
-                            </asp:TemplateColumn>
-                            <asp:TemplateColumn HeaderText="Giới tính" HeaderStyle-Width="1%" ItemStyle-Wrap="False"
+                                <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
+                            </asp:TemplateColumn>     
+                            <asp:TemplateColumn HeaderText="Email đăng nhập" HeaderStyle-Width="1%" ItemStyle-Wrap="False"
                                 HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
-                                SortExpression="CUSTOMER_SEX">
+                                SortExpression="CUSTOMER_UN_EMAIL">
                                 <ItemTemplate>
-                                    <%# getsex(DataBinder.Eval(Container.DataItem, "CUSTOMER_FIELD3"))%>
+                                        <%# DataBinder.Eval(Container.DataItem, "CUSTOMER_UN_EMAIL")%>
                                 </ItemTemplate>
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="40%"></HeaderStyle>
-                                <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Center"></ItemStyle>
-                            </asp:TemplateColumn>
+                                <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
+                            </asp:TemplateColumn>   
+                            <asp:TemplateColumn HeaderText="Loại" HeaderStyle-Width="1%" ItemStyle-Wrap="False"
+                                HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False"
+                                SortExpression="CUSTOMER_QUYEN">
+                                <ItemTemplate>
+                                        <%# getloai(DataBinder.Eval(Container.DataItem, "CUSTOMER_QUYEN"))%>
+                                </ItemTemplate>
+                                <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="40%"></HeaderStyle>
+                                <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Left"></ItemStyle>
+                            </asp:TemplateColumn>                    
                             <asp:TemplateColumn HeaderText="#" HeaderStyle-Width="95%" ItemStyle-Wrap="False"
                                 HeaderStyle-CssClass="tdGridHeader" ItemStyle-CssClass="tdGridRow" HeaderStyle-Wrap="False">
                                 <ItemTemplate>
-                                    <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "CUSTOMER_ID")) %>'>Chỉnh sửa
+                                    <a href='<%# getLink(DataBinder.Eval(Container.DataItem, "CUSTOMER_ID"), DataBinder.Eval(Container.DataItem, "CUSTOMER_QUYEN")) %>'>Chỉnh sửa
                                     </a>
                                 </ItemTemplate>
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%"></HeaderStyle>
@@ -195,7 +178,7 @@
                                 <HeaderStyle Wrap="False" CssClass="tdGridHeader" Width="1%"></HeaderStyle>
                                 <ItemStyle Wrap="False" CssClass="tdGridRow" HorizontalAlign="Center"></ItemStyle>
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lnkbtnDel" runat="server" CommandName="Delete">
+                                    <asp:LinkButton ID="lnkbtnDel" runat="server" CommandName="Delete" OnClientClick="return confirm('Bạn có chắc chắn xóa?');">
                                 <img src="../images/delete_icon.gif" title="Xóa" border="0">
                                     </asp:LinkButton>
                                 </ItemTemplate>

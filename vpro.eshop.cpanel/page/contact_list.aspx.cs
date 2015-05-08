@@ -52,7 +52,7 @@ namespace vpro.eshop.cpanel.page
             {
                 ucHeader.HeaderLevel1 = "Thông tin liên hệ";
                 ucHeader.HeaderLevel1_Url = "../page/contact_list.aspx";
-                ucHeader.HeaderLevel2 = "Thông tin liên hệ";
+                ucHeader.HeaderLevel2 = "Đăng ký tư vấn";
                 ucHeader.HeaderLevel2_Url = "../page/contact_list.aspx";
 
                 SearchResult();
@@ -83,7 +83,7 @@ namespace vpro.eshop.cpanel.page
                                || (g.CONTACT_TITLE).Contains(keyword) || (g.CONTACT_CONTENT).Contains(keyword)
                                || g.CONTACT_NAME.Contains(keyword) || g.CONTACT_EMAIL.Contains(keyword)
                                || g.CONTACT_TITLE.Contains(keyword) || g.CONTACT_CONTENT.Contains(keyword))
-                               &&g.CONTACT_TYPE!=1
+                               //&&g.CONTACT_TYPE!=1
                                orderby g.CONTACT_PUBLISHDATE descending
                                select g);
 
@@ -105,7 +105,11 @@ namespace vpro.eshop.cpanel.page
                 clsVproErrorHandler.HandlerError(ex);
             }
         }
-
+        public string getType(object type)
+        {
+            int typeId = Utils.CIntDef(type);
+            return typeId == 1 ? "Người tìm việc" : "Nhà tuyển dụng";
+        }
         private void EventDelete(DataGridCommandEventArgs e)
         {
             try

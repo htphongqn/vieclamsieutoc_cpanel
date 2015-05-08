@@ -11,13 +11,34 @@
             </ul>
         </li>
         <li><a href="#">
-            <img src="../Images/Create_product.png" width="15" height="15" style="padding-right: 5px;
-                border: 0px;" />Dự án/Sản phẩm/Tin tức</a>
+            <img src="../Images/category20.png" width="15" height="15" style="padding-right: 5px;
+                border: 0px;" />Danh mục</a>
             <ul>
-                <li><a href="news_list.aspx">DS việc làm/tin tức</a></li>
-                <li><a href="news.aspx">Thêm mới việc làm/tin tức</a></li>
+                <li><a href="khuvucs.aspx">DS khu vực</a></li>
+                <li><a href="mucluongs.aspx">DS mức lương</a></li>
+                <li><a href="kinhnghiems.aspx">DS kinh nghiệm</a></li>
+                <li><a href="thanhphos.aspx">DS thành phố</a></li>
+                <li><a href="capbacs.aspx">DS cấp bậc</a></li>
+                <li><a href="bangcaps.aspx">DS bằng cấp</a></li>
+            </ul>
+        </li>
+        <li><a href="#">
+            <img src="../Images/Create_product.png" width="15" height="15" style="padding-right: 5px;
+                border: 0px;" />Tin tức</a>
+            <ul>
+                <li><a href="news_list.aspx">Danh sách tin tức</a></li>
+                <li><a href="news.aspx">Thêm mới tin tức</a></li>
                 <%--<li><a href="extensionfiles_list.aspx">Dạng mở rộng file</a></li>
                 <li><a href="page-comment.aspx">Danh sách comment</a></li>--%>
+            </ul>
+        </li>
+        <li><a href="#">
+            <img src="../Images/Create_product.png" width="15" height="15" style="padding-right: 5px;
+                border: 0px;" />Việc làm</a>
+            <ul>
+                <li><a href="timviec_list.aspx">Danh sách tìm việc</a></li>
+                <li><a href="tuyendung_list.aspx">Danh sách tuyển dụng</a></li>
+                <li><a href="customer_list.aspx">Danh sách khách hàng</a></li>
             </ul>
         </li>
         <%--<li><a href="#">
@@ -63,7 +84,7 @@
             <img src="../Images/User_Customer.png" width="15" height="15" style="padding-right: 5px;
                 border: 0px;" />Thông tin liên hệ</a>
             <ul>
-                <li><a href="contact_list.aspx">Danh sách liên hệ</a></li>
+                <li><a href="contact_list.aspx">DS Đăng ký tư vấn</a></li>
                 <li><a href="contact_config.aspx">Cấu hình liên hệ</a></li>
                 <%--<li><a href="page-email-send.aspx">Danh sách đăng ký nhận tin </a></li>--%>
             </ul>

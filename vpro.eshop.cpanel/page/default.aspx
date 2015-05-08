@@ -31,7 +31,7 @@
                     <div id="menu_images">
                         <img src="../Images/icon-news70.png" width="70" height="70" /></div>
                     <div id="menu_title">
-                        <a href="../page/news_list.aspx">Dự án-Sản phẩm-Tin tức</a></div>
+                        <a href="../page/news_list.aspx">Tin tức</a></div>
                     <div id="menu_content">
                         Thêm mới/ Cập nhật tất cả các bài viết trên website, các bài biết tin tức, các bài
                         viết về dịch vụ.</div>
@@ -76,9 +76,10 @@
                     <div id="menu_images">
                         <img src="../Images/order70.png" width="70" height="70" /></div>
                     <div id="menu_title">
-                        <a href="../page/order_list.aspx">Danh sách đơn hàng</a></div>
+                        <a href="../page/timviec_list.aspx">Danh sách ứng viên & tuyển dụng</a></div>
                     <div id="menu_content">
-                        Danh sách các đơn đặt hàng trực tuyến mà khách hàng đã gửi về cho shop</div>
+                        Danh sách các ứng viên & tuyển dụng<br />
+                        Quản lý danh sách các ứng viên & tuyển dụng</div>
                 </div>
                 <div id="menu_child">
                     <div id="menu_images">

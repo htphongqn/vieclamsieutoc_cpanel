@@ -336,6 +336,7 @@
     <Content Include="Images\Minus.png" />
     <Content Include="Images\Money_Product.png" />
     <Content Include="Images\MuiTen.jpg" />
+    <Content Include="Images\noimage.jpg" />
     <Content Include="Images\Order in_checkList.png" />
     <Content Include="Images\Order_checkList.png" />
     <Content Include="Images\Sendmail.png" />
@@ -379,7 +380,22 @@
     <Content Include="page\config_emailtemplate_list.aspx" />
     <Content Include="page\config_emailtemplate.aspx" />
     <Content Include="page\config_emailtemplate_insert.aspx" />
-    <Content Include="page\customer.aspx" />
+    <Content Include="page\capbac.aspx" />
+    <Content Include="page\capbacs.aspx" />
+    <Content Include="page\bangcap.aspx" />
+    <Content Include="page\bangcaps.aspx" />
+    <Content Include="page\thanhpho.aspx" />
+    <Content Include="page\thanhphos.aspx" />
+    <Content Include="page\customerNTD.aspx" />
+    <Content Include="page\khuvuc.aspx" />
+    <Content Include="page\khuvucs.aspx" />
+    <Content Include="page\kinhnghiem.aspx" />
+    <Content Include="page\kinhnghiems.aspx" />
+    <Content Include="page\tuyendung.aspx" />
+    <Content Include="page\timviec.aspx" />
+    <Content Include="page\tuyendung_list.aspx" />
+    <Content Include="page\timviec_list.aspx" />
+    <Content Include="page\customerNTV.aspx" />
     <Content Include="page\customer_list.aspx" />
     <Content Include="page\email_ads_list.aspx" />
     <Content Include="page\news_images.aspx" />
@@ -500,6 +516,8 @@
     <Content Include="tinymce\skins\lightgray\skin.min.css" />
     <Content Include="tinymce\themes\modern\theme.min.js" />
     <Content Include="tinymce\tinymce.min.js" />
+    <Content Include="page\mucluong.aspx" />
+    <Content Include="page\mucluongs.aspx" />
     <Content Include="ucControls\ucFooter.ascx" />
     <Content Include="ucControls\ucHeader.ascx" />
     <Content Include="ucControls\ucLeftmenu.ascx" />
@@ -713,12 +731,117 @@
     <Compile Include="page\config_emailtemplate_insert.aspx.designer.cs">
       <DependentUpon>config_emailtemplate_insert.aspx</DependentUpon>
     </Compile>
-    <Compile Include="page\customer.aspx.cs">
-      <DependentUpon>customer.aspx</DependentUpon>
+    <Compile Include="page\capbac.aspx.cs">
+      <DependentUpon>capbac.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="page\customer.aspx.designer.cs">
-      <DependentUpon>customer.aspx</DependentUpon>
+    <Compile Include="page\capbac.aspx.designer.cs">
+      <DependentUpon>capbac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\capbacs.aspx.cs">
+      <DependentUpon>capbacs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\capbacs.aspx.designer.cs">
+      <DependentUpon>capbacs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\bangcap.aspx.cs">
+      <DependentUpon>bangcap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\bangcap.aspx.designer.cs">
+      <DependentUpon>bangcap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\bangcaps.aspx.cs">
+      <DependentUpon>bangcaps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\bangcaps.aspx.designer.cs">
+      <DependentUpon>bangcaps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\thanhpho.aspx.cs">
+      <DependentUpon>thanhpho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\thanhpho.aspx.designer.cs">
+      <DependentUpon>thanhpho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\thanhphos.aspx.cs">
+      <DependentUpon>thanhphos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\thanhphos.aspx.designer.cs">
+      <DependentUpon>thanhphos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\customerNTD.aspx.cs">
+      <DependentUpon>customerNTD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\customerNTD.aspx.designer.cs">
+      <DependentUpon>customerNTD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\khuvuc.aspx.cs">
+      <DependentUpon>khuvuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\khuvuc.aspx.designer.cs">
+      <DependentUpon>khuvuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\khuvucs.aspx.cs">
+      <DependentUpon>khuvucs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\khuvucs.aspx.designer.cs">
+      <DependentUpon>khuvucs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\kinhnghiem.aspx.cs">
+      <DependentUpon>kinhnghiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\kinhnghiem.aspx.designer.cs">
+      <DependentUpon>kinhnghiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\kinhnghiems.aspx.cs">
+      <DependentUpon>kinhnghiems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\kinhnghiems.aspx.designer.cs">
+      <DependentUpon>kinhnghiems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\tuyendung.aspx.cs">
+      <DependentUpon>tuyendung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\tuyendung.aspx.designer.cs">
+      <DependentUpon>tuyendung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\timviec.aspx.cs">
+      <DependentUpon>timviec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\timviec.aspx.designer.cs">
+      <DependentUpon>timviec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\tuyendung_list.aspx.cs">
+      <DependentUpon>tuyendung_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\tuyendung_list.aspx.designer.cs">
+      <DependentUpon>tuyendung_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\timviec_list.aspx.cs">
+      <DependentUpon>timviec_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\timviec_list.aspx.designer.cs">
+      <DependentUpon>timviec_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\customerNTV.aspx.cs">
+      <DependentUpon>customerNTV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\customerNTV.aspx.designer.cs">
+      <DependentUpon>customerNTV.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\customer_list.aspx.cs">
       <DependentUpon>customer_list.aspx</DependentUpon>
@@ -1028,6 +1151,20 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="page\mucluong.aspx.cs">
+      <DependentUpon>mucluong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\mucluong.aspx.designer.cs">
+      <DependentUpon>mucluong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\mucluongs.aspx.cs">
+      <DependentUpon>mucluongs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\mucluongs.aspx.designer.cs">
+      <DependentUpon>mucluongs.aspx</DependentUpon>
     </Compile>
     <Compile Include="ucControls\ucFooter.ascx.cs">
       <DependentUpon>ucFooter.ascx</DependentUpon>

@@ -355,15 +355,16 @@
                     Loại thông tin
                 </th>
                 <td height="25">
-                    <asp:RadioButtonList ID="rblNewsType" runat="server" RepeatColumns="6" AutoPostBack="True"
+                    <asp:RadioButtonList ID="rblNewsType" runat="server" RepeatColumns="3" AutoPostBack="True"
                         OnSelectedIndexChanged="rblNewsType_SelectedIndexChanged">
-                        <asp:ListItem Text="Tìm việc" Value="1" Selected="True"></asp:ListItem>
-                        <asp:ListItem Text="Tuyển dụng" Value="2"></asp:ListItem>
-                        <asp:ListItem Text="Cẩm nang" Value="3"></asp:ListItem>
+                        <%--<asp:ListItem Text="Tìm việc" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="Tuyển dụng" Value="2"></asp:ListItem>--%>
+                        <asp:ListItem Text="Cẩm nang" Value="3" Selected="True"></asp:ListItem>
                         <asp:ListItem Text="Góp ý" Value="4"></asp:ListItem>
                         <asp:ListItem Text="Hướng dẫn sử dụng" Value="5"></asp:ListItem>
                         <asp:ListItem Text="Thông báo cho NTV" Value="6"></asp:ListItem>
                         <asp:ListItem Text="Thông báo cho NTD" Value="7"></asp:ListItem>
+                        <asp:ListItem Text="Liên hệ quảng cáo" Value="8"></asp:ListItem>
                     </asp:RadioButtonList>
                 </td>
             </tr>
@@ -419,7 +420,7 @@
                     </asp:RadioButtonList>
                 </td>
             </tr>
-          <tr>
+          <tr style="display:none">
                 <th valign="top" class="left">
                     Địa chỉ
                 </th>
@@ -427,7 +428,7 @@
                     <input type="text" id="txtAddress" runat="server" style="width: 500px;"  />                    
                 </td>
             </tr>
-            <tr>
+            <tr style="display:none">
                 <th valign="top" class="left">
                     Số điện thoại
                 </th>
@@ -435,7 +436,7 @@
                     <input type="text" id="txtPhone" runat="server" style="width: 500px;"  />                    
                 </td>
             </tr>
-            <tr>
+            <tr style="display:none">
                 <th valign="top" class="left">
                    Email
                 </th>
@@ -443,7 +444,7 @@
                     <input type="text" id="txtEmail" runat="server" style="width: 500px;"  />                    
                 </td>
             </tr>
-            <tr>
+            <tr style="display:none">
                 <th valign="top" class="left">
                    Google link
                 </th>
@@ -546,7 +547,7 @@
                 <textarea id="mrk" cols="20" rows="10" class="mrk mceEditor" style="height: 500px;" runat="server"></textarea>
             </div>
         </div>
-        <div id="dvPrice" style="width: 650px;" data-collapse runat="server">
+<%--        <div id="dvPrice" style="width: 650px;" data-collapse runat="server">
             <h3 class="collapse open">
                 Thông tin giá cả</h3>
             <div>
@@ -563,7 +564,7 @@
                     </tr>
                 </table>
             </div>
-        </div>
+        </div>--%>
         <div id="seo" style="width: 650px;" data-collapse>
             <h3 class="collapse">
                 SEO Parameters</h3>
@@ -691,54 +692,6 @@
                     </tr>
                 </table>
             </div>
-        </div>
-        <div id="dvProductDetails" style="width: 650px;" data-collapse runat="server">
-            <%--<h3 class="collapse">
-                Thông tin chi tiết sản phẩm</h3>  --%>
-            <%-- <table width="auto" border="0">
-                    <tr>
-                        <th valign="top" class="left">
-                            Tình trạng
-                        </th>
-                        <td>
-                            <input type="text" name="txtStatus" id="txtStatus" runat="server" style="width: 500px;" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th valign="top" class="left">
-                            Bảo hành
-                        </th>
-                        <td>
-                            <input type="text" name="txtWarranty" id="txtWarranty" runat="server" style="width: 500px;" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th valign="top" class="left">
-                            Nhà nhập khẩu
-                        </th>
-                        <td>
-                            <input type="text" name="txtOrigin" id="txtOrigin" runat="server" style="width: 500px;" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th valign="top" class="left">
-                            Hãng sản xuất
-                        </th>
-                        <td>
-                            <input type="text" name="txtManufacture" id="txtManufacture" runat="server" style="width: 500px;" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th valign="top" class="left">
-                            Khối lượng (gram)
-                        </th>
-                        <td>
-                            <input type="text" name="txtPrice" id="txtWeight" runat="server" onkeyup="this.value=formatNumeric(this.value);"
-                                onblur="this.value=formatNumeric(this.value);" maxlength="20" style="width: 500px;"
-                                value="0" />
-                        </td>
-                    </tr>
-                </table>--%>
-        </div>
+        </div>        
     </div>
 </asp:Content>

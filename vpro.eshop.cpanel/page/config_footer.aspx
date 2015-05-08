@@ -146,7 +146,6 @@
     </div>
     <!--icon_function_parent-->
     <div id="field">
-    Cấu hình footer tiếng việt
         <table width="auto" border="0">
             <tr>
                 <td>
@@ -155,7 +154,7 @@
             </tr>
         </table>
     </div>
-    <div id="field">
+    <div id="field" style="display:none">
          Cấu hình footer tiếng anh
         <table width="auto" border="0">
             <tr>
@@ -165,7 +164,7 @@
             </tr>
         </table>
     </div>
-    <div id="Div1">
+    <div id="Div1"  style="display:none">
          Cấu hình footer tiếng nga
         <table width="auto" border="0">
             <tr>
