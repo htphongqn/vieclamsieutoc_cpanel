@@ -384,6 +384,14 @@
     <Content Include="page\capbacs.aspx" />
     <Content Include="page\bangcap.aspx" />
     <Content Include="page\bangcaps.aspx" />
+    <Content Include="page\hinhthucnophoso.aspx" />
+    <Content Include="page\hinhthucnophosos.aspx" />
+    <Content Include="page\hinhthuclamviec.aspx" />
+    <Content Include="page\hinhthuclamviecs.aspx" />
+    <Content Include="page\truongtotnghiep.aspx" />
+    <Content Include="page\truongtotnghieps.aspx" />
+    <Content Include="page\dotuoi.aspx" />
+    <Content Include="page\dotuois.aspx" />
     <Content Include="page\thanhpho.aspx" />
     <Content Include="page\thanhphos.aspx" />
     <Content Include="page\customerNTD.aspx" />
@@ -758,6 +766,62 @@
     </Compile>
     <Compile Include="page\bangcaps.aspx.designer.cs">
       <DependentUpon>bangcaps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\hinhthucnophoso.aspx.cs">
+      <DependentUpon>hinhthucnophoso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\hinhthucnophoso.aspx.designer.cs">
+      <DependentUpon>hinhthucnophoso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\hinhthucnophosos.aspx.cs">
+      <DependentUpon>hinhthucnophosos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\hinhthucnophosos.aspx.designer.cs">
+      <DependentUpon>hinhthucnophosos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\hinhthuclamviec.aspx.cs">
+      <DependentUpon>hinhthuclamviec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\hinhthuclamviec.aspx.designer.cs">
+      <DependentUpon>hinhthuclamviec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\hinhthuclamviecs.aspx.cs">
+      <DependentUpon>hinhthuclamviecs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\hinhthuclamviecs.aspx.designer.cs">
+      <DependentUpon>hinhthuclamviecs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\truongtotnghiep.aspx.cs">
+      <DependentUpon>truongtotnghiep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\truongtotnghiep.aspx.designer.cs">
+      <DependentUpon>truongtotnghiep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\truongtotnghieps.aspx.cs">
+      <DependentUpon>truongtotnghieps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\truongtotnghieps.aspx.designer.cs">
+      <DependentUpon>truongtotnghieps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dotuoi.aspx.cs">
+      <DependentUpon>dotuoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dotuoi.aspx.designer.cs">
+      <DependentUpon>dotuoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dotuois.aspx.cs">
+      <DependentUpon>dotuois.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dotuois.aspx.designer.cs">
+      <DependentUpon>dotuois.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\thanhpho.aspx.cs">
       <DependentUpon>thanhpho.aspx</DependentUpon>

@@ -63,7 +63,7 @@ namespace vpro.eshop.cpanel.page
                 lbHinhthucnophoso.Text = getHinhthucnop(item.VL_HINHTHUCNOPHOSO_ID);
                 lbKinhnghiem.Text = getKinhnghiem(item.VL_KINHNGHIEM_ID);
                 lbBangcap.Text = getTrinhdohocvan(item.VL_TRINHDOHOCVAN_ID);
-                lbGioitinh.Text = Utils.CIntDef(item.YEUCAUGIOITINH, 3) == 1 ? "Nam" : (Utils.CIntDef(item.YEUCAUGIOITINH, 3) == 2 ? "Nữ" : "Không yêu cầu");
+                lbGioitinh.Text = Utils.CIntDef(item.YEUCAUGIOITINH, 0) == 1 ? "Nam" : (Utils.CIntDef(item.YEUCAUGIOITINH, 0) == 2 ? "Nữ" : (Utils.CIntDef(item.YEUCAUGIOITINH, 0) == 3 ? "Khác" : "Không yêu cầu"));
                 lbDotuoi.Text = getDotuoi(item.VL_DOTUOI_ID);
                 lbSoluongtuyen.Text = Utils.CStrDef(item.SOLUONGTUYEN);
 
@@ -290,7 +290,7 @@ namespace vpro.eshop.cpanel.page
             {
                 return item.ToList()[0].NAME;
             }
-            return "";
+            return "Không yêu cầu";
         }
         public string getCusName(object oid)
         {

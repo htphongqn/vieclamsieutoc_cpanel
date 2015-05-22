@@ -71,8 +71,8 @@
                 </th>
                 <td>
                     <asp:RadioButtonList ID="rdbTrangthai" runat="server" RepeatColumns="5">
-                        <asp:ListItem Text="Chưa kích hoạt" Value="3" Selected="True"></asp:ListItem>
-                        <asp:ListItem Text="Đã kích hoạt" Value="1"></asp:ListItem>
+                        <%--<asp:ListItem Text="Chưa kích hoạt" Value="3"></asp:ListItem>--%>
+                        <asp:ListItem Text="Đã kích hoạt" Value="1" Selected="True"></asp:ListItem>
                         <asp:ListItem Text="Khóa" Value="2"></asp:ListItem>
                     </asp:RadioButtonList>
                 </td>

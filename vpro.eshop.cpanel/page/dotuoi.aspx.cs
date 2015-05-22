@@ -13,7 +13,7 @@ using vpro.eshop.cpanel.Components;
 
 namespace vpro.eshop.cpanel.page
 {
-    public partial class bangcap : System.Web.UI.Page
+    public partial class dotuoi : System.Web.UI.Page
     {
         #region Declare
 
@@ -35,10 +35,10 @@ namespace vpro.eshop.cpanel.page
 
             if (!IsPostBack)
             {
-                ucHeader.HeaderLevel1 = "DS bằng cấp";
-                ucHeader.HeaderLevel1_Url = "../page/bangcaps.aspx";
-                ucHeader.HeaderLevel2 = "Thêm mới bằng cấp";
-                ucHeader.HeaderLevel2_Url = "../page/bangcap.aspx";
+                ucHeader.HeaderLevel1 = "DS độ tuổi";
+                ucHeader.HeaderLevel1_Url = "../page/dotuois.aspx";
+                ucHeader.HeaderLevel2 = "Thêm mới độ tuổi";
+                ucHeader.HeaderLevel2_Url = "../page/dotuoi.aspx";
 
                 getInfo();
             }
@@ -56,7 +56,7 @@ namespace vpro.eshop.cpanel.page
 
         protected void lbtSaveNew_Click(object sender, EventArgs e)
         {
-            SaveInfo("bangcap.aspx");
+            SaveInfo("dotuoi.aspx");
         }
 
         protected void lbtDelete_Click(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace vpro.eshop.cpanel.page
         {
             try
             {
-                var G_info = (from c in DB.VL_TRINHDOHOCVANs
+                var G_info = (from c in DB.VL_DOTUOIs
                               where c.ID == _id
                               select c
                             );
@@ -105,7 +105,7 @@ namespace vpro.eshop.cpanel.page
                 {
                     //insert
 
-                    VL_TRINHDOHOCVAN insert = new VL_TRINHDOHOCVAN();
+                    VL_DOTUOI insert = new VL_DOTUOI();
 
                     insert.NAME = Name;
                     insert.DESCRIPTION = Desc;
@@ -114,17 +114,17 @@ namespace vpro.eshop.cpanel.page
                     insert.PRIORITY = Order;
 
 
-                    DB.VL_TRINHDOHOCVANs.InsertOnSubmit(insert);
+                    DB.VL_DOTUOIs.InsertOnSubmit(insert);
                     DB.SubmitChanges();
 
                     _id = Utils.CIntDef(insert.ID);
 
-                    strLink = string.IsNullOrEmpty(strLink) ? "bangcaps.aspx?id=" + _id : strLink;
+                    strLink = string.IsNullOrEmpty(strLink) ? "dotuois.aspx?id=" + _id : strLink;
                 }
                 else
                 {
                     //update
-                    var c_update = DB.GetTable<VL_TRINHDOHOCVAN>().Where(g => g.ID == _id);
+                    var c_update = DB.GetTable<VL_DOTUOI>().Where(g => g.ID == _id);
 
                     if (c_update.ToList().Count > 0)
                     {
@@ -137,7 +137,7 @@ namespace vpro.eshop.cpanel.page
 
                         DB.SubmitChanges();
 
-                        strLink = string.IsNullOrEmpty(strLink) ? "bangcaps.aspx" : strLink;
+                        strLink = string.IsNullOrEmpty(strLink) ? "dotuois.aspx" : strLink;
                     }
                 }
             }
@@ -156,11 +156,11 @@ namespace vpro.eshop.cpanel.page
         {
             try
             {
-                var G_info = DB.GetTable<VL_TRINHDOHOCVAN>().Where(g => g.ID == _id);
+                var G_info = DB.GetTable<VL_DOTUOI>().Where(g => g.ID == _id);
 
-                DB.VL_TRINHDOHOCVANs.DeleteAllOnSubmit(G_info);
+                DB.VL_DOTUOIs.DeleteAllOnSubmit(G_info);
                 DB.SubmitChanges();
-                Response.Redirect("bangcaps.aspx");
+                Response.Redirect("dotuois.aspx");
             }
             catch (Exception ex)
             {
@@ -182,7 +182,7 @@ namespace vpro.eshop.cpanel.page
 
         public string getLink(object GroupId)
         {
-            return "bangcap.aspx?id=" + Utils.CStrDef(GroupId);
+            return "dotuoi.aspx?id=" + Utils.CStrDef(GroupId);
         }
 
         public static string Duplicate(string partToDuplicate, int howManyTimes)

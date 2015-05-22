@@ -85,8 +85,8 @@
                 </th>
                 <td>
                     <asp:RadioButtonList ID="rdbTrangthai" runat="server" RepeatColumns="5">
-                        <asp:ListItem Text="Chưa kích hoạt" Value="3" Selected="True"></asp:ListItem>
-                        <asp:ListItem Text="Đã kích hoạt" Value="1"></asp:ListItem>
+                        <%--<asp:ListItem Text="Chưa kích hoạt" Value="3"></asp:ListItem>--%>
+                        <asp:ListItem Text="Đã kích hoạt" Value="1" Selected="True"></asp:ListItem>
                         <asp:ListItem Text="Khóa" Value="2"></asp:ListItem>
                     </asp:RadioButtonList>
                 </td>
@@ -137,13 +137,13 @@
             </tr>
             <tr>
                 <th valign="top" class="left">
-                    <span class="user">*</span>Số điện thoại
+                    <span class="user"></span>Số điện thoại
                 </th>
                 <td>
                     <input type="text" name="txtCustomerPhone1" id="txtCustomerPhone1" runat="server"
                         style="width: 500px;" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Vui lòng nhập số điện thoại !"
-                        Text="Vui lòng nhập số điện thoại !" ControlToValidate="txtCustomerPhone1" CssClass="errormes"></asp:RequiredFieldValidator>
+                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Vui lòng nhập số điện thoại !"
+                        Text="Vui lòng nhập số điện thoại !" ControlToValidate="txtCustomerPhone1" CssClass="errormes"></asp:RequiredFieldValidator>--%>
                 </td>
             </tr>
             <tr>

@@ -671,7 +671,7 @@
                             <img id="Image3" runat="server" alt="" />
                         </td>
                     </tr>
-                    <tr id="trUploadImage4" runat="server">
+                    <%--<tr id="trUploadImage4" runat="server">
                         <th valign="top" class="left">
                             Logo
                         </th>
@@ -689,7 +689,7 @@
                             <asp:HyperLink runat="server" ID="hplImage4" Target="_blank"></asp:HyperLink><br />
                             <img id="Image4" runat="server" alt="" />
                         </td>
-                    </tr>
+                    </tr>--%>
                 </table>
             </div>
         </div>        

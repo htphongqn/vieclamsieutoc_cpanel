@@ -7,3 +7,4 @@ D:\PhongHT\Websites\dev\vieclamsieutoc_cpanel\vpro.eshop.cpanel\bin\vpro.eshop.c
 D:\PhongHT\Websites\dev\vieclamsieutoc_cpanel\vpro.eshop.cpanel\bin\vpro.eshop.cpanel.pdb
 D:\PhongHT\Websites\dev\vieclamsieutoc_cpanel\vpro.eshop.cpanel\obj\Debug\vpro.eshop.cpanel.dll
 D:\PhongHT\Websites\dev\vieclamsieutoc_cpanel\vpro.eshop.cpanel\obj\Debug\vpro.eshop.cpanel.pdb
+D:\PhongHT\Websites\dev\vieclamsieutoc_cpanel\vpro.eshop.cpanel\obj\Debug\vieclamsieutoc.cpanel.csprojResolveAssemblyReference.cache

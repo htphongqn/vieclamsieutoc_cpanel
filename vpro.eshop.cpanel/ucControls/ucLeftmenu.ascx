@@ -20,6 +20,10 @@
                 <li><a href="thanhphos.aspx">DS thành phố</a></li>
                 <li><a href="capbacs.aspx">DS cấp bậc</a></li>
                 <li><a href="bangcaps.aspx">DS bằng cấp</a></li>
+                <li><a href="dotuois.aspx">DS độ tuổi</a></li>
+                <li><a href="truongtotnghieps.aspx">DS trường tốt nghiệp</a></li>
+                <li><a href="hinhthuclamviecs.aspx">DS hình thức làm việc</a></li>
+                <li><a href="hinhthucnophosos.aspx">DS hình thức nộp hồ sơ</a></li>
             </ul>
         </li>
         <li><a href="#">

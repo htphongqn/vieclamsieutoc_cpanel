@@ -298,7 +298,7 @@ namespace vpro.eshop.cpanel.page
             }
             finally
             {
-                Response.Redirect("news_list.aspx");
+                Response.Redirect("tuyendung_list.aspx");
             }
         }
 

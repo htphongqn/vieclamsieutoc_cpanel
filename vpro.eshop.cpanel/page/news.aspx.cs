@@ -327,20 +327,20 @@ namespace vpro.eshop.cpanel.page
                         trUploadImage3.Visible = true;
                         trImage3.Visible = false;
                     }
-                    //image4
-                    if (!string.IsNullOrEmpty(G_info.ToList()[0].n.NEWS_IMAGE4))
-                    {
-                        trUploadImage4.Visible = false;
-                        trImage4.Visible = true;
-                        Image4.Src = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE4;
-                        hplImage4.NavigateUrl = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE4;
-                        hplImage4.Text = G_info.ToList()[0].n.NEWS_IMAGE4;
-                    }
-                    else
-                    {
-                        trUploadImage4.Visible = true;
-                        trImage4.Visible = false;
-                    }
+                    ////image4
+                    //if (!string.IsNullOrEmpty(G_info.ToList()[0].n.NEWS_IMAGE4))
+                    //{
+                    //    trUploadImage4.Visible = false;
+                    //    trImage4.Visible = true;
+                    //    Image4.Src = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE4;
+                    //    hplImage4.NavigateUrl = PathFiles.GetPathNews(m_news_id) + G_info.ToList()[0].n.NEWS_IMAGE4;
+                    //    hplImage4.Text = G_info.ToList()[0].n.NEWS_IMAGE4;
+                    //}
+                    //else
+                    //{
+                    //    trUploadImage4.Visible = true;
+                    //    trImage4.Visible = false;
+                    //}
                 }
                 else
                 {
@@ -350,8 +350,8 @@ namespace vpro.eshop.cpanel.page
                     //trImage2.Visible = false;
                     trUploadImage3.Visible = true;
                     trImage3.Visible = false;
-                    trUploadImage4.Visible = true;
-                    trImage4.Visible = false;
+                    //trUploadImage4.Visible = true;
+                    //trImage4.Visible = false;
                     LoadCategoryParent();
                     //trCat.Visible = true;
 
@@ -422,23 +422,23 @@ namespace vpro.eshop.cpanel.page
                 {
                     News_Image3 = hplImage3.Text;
                 }
-                string News_Image4;
+                //string News_Image4;
 
-                if (trUploadImage4.Visible == true)
-                {
-                    if (fileImage4.PostedFile != null)
-                    {
-                        News_Image4 = Path.GetFileName(fileImage4.PostedFile.FileName);
-                    }
-                    else
-                    {
-                        News_Image4 = "";
-                    }
-                }
-                else
-                {
-                    News_Image4 = hplImage4.Text;
-                }
+                //if (trUploadImage4.Visible == true)
+                //{
+                //    if (fileImage4.PostedFile != null)
+                //    {
+                //        News_Image4 = Path.GetFileName(fileImage4.PostedFile.FileName);
+                //    }
+                //    else
+                //    {
+                //        News_Image4 = "";
+                //    }
+                //}
+                //else
+                //{
+                //    News_Image4 = hplImage4.Text;
+                //}
 
                 
 
@@ -476,7 +476,7 @@ namespace vpro.eshop.cpanel.page
                         //news_insert.NEWS_IMAGE1 = News_Image1;
                         //news_insert.NEWS_IMAGE2 = News_Image2;
                         news_insert.NEWS_IMAGE3 = News_Image3;
-                        news_insert.NEWS_IMAGE4 = News_Image4;
+                        //news_insert.NEWS_IMAGE4 = News_Image4;
 
                         news_insert.USER_ID = Utils.CIntDef(Session["USER_ID"]);
                         news_insert.NEWS_PUBLISHDATE = DateTime.Now;
@@ -531,7 +531,7 @@ namespace vpro.eshop.cpanel.page
                             //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
                             //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
                             c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
-                            c_update.ToList()[0].NEWS_IMAGE4 = News_Image4;
+                            //c_update.ToList()[0].NEWS_IMAGE4 = News_Image4;
 
                             c_update.ToList()[0].ADDRESS = Utils.CStrDef(txtAddress.Value);
                             c_update.ToList()[0].PHONE = Utils.CStrDef(txtPhone.Value);
@@ -597,22 +597,22 @@ namespace vpro.eshop.cpanel.page
                         }
 
                     }
-                    if (trUploadImage4.Visible)
-                    {
-                        if (!string.IsNullOrEmpty(fileImage4.PostedFile.FileName))
-                        {
-                            string pathfile = Server.MapPath("/data/news/" + m_news_id);
-                            string fullpathfile = pathfile + "/" + News_Image4;
+                    //if (trUploadImage4.Visible)
+                    //{
+                    //    if (!string.IsNullOrEmpty(fileImage4.PostedFile.FileName))
+                    //    {
+                    //        string pathfile = Server.MapPath("/data/news/" + m_news_id);
+                    //        string fullpathfile = pathfile + "/" + News_Image4;
 
-                            if (!Directory.Exists(pathfile))
-                            {
-                                Directory.CreateDirectory(pathfile);
-                            }
+                    //        if (!Directory.Exists(pathfile))
+                    //        {
+                    //            Directory.CreateDirectory(pathfile);
+                    //        }
 
-                            fileImage4.PostedFile.SaveAs(fullpathfile);
-                        }
+                    //        fileImage4.PostedFile.SaveAs(fullpathfile);
+                    //    }
 
-                    }
+                    //}
                 }
                 else
                 {
@@ -648,7 +648,7 @@ namespace vpro.eshop.cpanel.page
                             //news_insert.NEWS_IMAGE1 = News_Image1;
                             //news_insert.NEWS_IMAGE2 = News_Image2;
                             news_insert.NEWS_IMAGE3 = News_Image3;
-                            news_insert.NEWS_IMAGE4 = News_Image4;
+                            //news_insert.NEWS_IMAGE4 = News_Image4;
 
                             news_insert.USER_ID = Utils.CIntDef(Session["USER_ID"]);
                             news_insert.NEWS_PUBLISHDATE = DateTime.Now;
@@ -708,7 +708,7 @@ namespace vpro.eshop.cpanel.page
                                 //c_update.ToList()[0].NEWS_IMAGE1 = News_Image1;
                                 //c_update.ToList()[0].NEWS_IMAGE2 = News_Image2;
                                 c_update.ToList()[0].NEWS_IMAGE3 = News_Image3;
-                                c_update.ToList()[0].NEWS_IMAGE4 = News_Image4;
+                                //c_update.ToList()[0].NEWS_IMAGE4 = News_Image4;
 
                                 c_update.ToList()[0].ADDRESS = Utils.CStrDef(txtAddress.Value);
                                 c_update.ToList()[0].PHONE = Utils.CStrDef(txtPhone.Value);
@@ -772,22 +772,22 @@ namespace vpro.eshop.cpanel.page
                             }
 
                         }
-                        if (trUploadImage4.Visible)
-                        {
-                            if (!string.IsNullOrEmpty(fileImage4.PostedFile.FileName))
-                            {
-                                string pathfile = Server.MapPath("/data/news/" + m_news_id);
-                                string fullpathfile = pathfile + "/" + News_Image4;
+                        //if (trUploadImage4.Visible)
+                        //{
+                        //    if (!string.IsNullOrEmpty(fileImage4.PostedFile.FileName))
+                        //    {
+                        //        string pathfile = Server.MapPath("/data/news/" + m_news_id);
+                        //        string fullpathfile = pathfile + "/" + News_Image4;
 
-                                if (!Directory.Exists(pathfile))
-                                {
-                                    Directory.CreateDirectory(pathfile);
-                                }
+                        //        if (!Directory.Exists(pathfile))
+                        //        {
+                        //            Directory.CreateDirectory(pathfile);
+                        //        }
 
-                                fileImage4.PostedFile.SaveAs(fullpathfile);
-                            }
+                        //        fileImage4.PostedFile.SaveAs(fullpathfile);
+                        //    }
 
-                        }
+                        //}
                     }
                     //else
                     //{
