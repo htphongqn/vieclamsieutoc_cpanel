@@ -30,7 +30,7 @@ namespace vpro.eshop.cpanel.page
             m_news_id = Utils.CIntDef(Request["news_id"]);
             if (!IsPostBack)
             {
-                ucHeader.HeaderLevel1 = "Việc làm";
+                ucHeader.HeaderLevel1 = "Tìm việc";
                 ucHeader.HeaderLevel1_Url = "../page/timviec_list.aspx";
                 ucHeader.HeaderLevel2 = "Thêm mới/cập nhật Việc làm";
                 ucHeader.HeaderLevel2_Url = "../page/timviec.aspx";

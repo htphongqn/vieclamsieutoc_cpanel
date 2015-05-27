@@ -52,10 +52,10 @@ namespace vpro.eshop.cpanel.page
             //lang = Convert.ToInt32(Session["NN"]);
             if (!IsPostBack)
             {
-                ucHeader.HeaderLevel1 = "Tin tức";
-                ucHeader.HeaderLevel1_Url = "../page/news_list.aspx";
+                ucHeader.HeaderLevel1 = "Tuyển dụng";
+                ucHeader.HeaderLevel1_Url = "../page/tuyendung_list.aspx";
                 ucHeader.HeaderLevel2 = "Danh sách";
-                ucHeader.HeaderLevel2_Url = "../page/news_list.aspx";
+                ucHeader.HeaderLevel2_Url = "../page/tuyendung_list.aspx";
                 Loadchuyenmuc();
                 SearchResult();
 
